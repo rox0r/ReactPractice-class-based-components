@@ -12,12 +12,19 @@ class Users extends Component {
     };
   }
 
+  componentDidUpdate() {
+    if (this.props.users.length === 0) {
+      throw new Error("No user provided");
+    }
+  }
+
   toggleUsersHandler() {
     //Access prevValue like func comps
     this.setState((prevState) => {
       return { showUsers: !prevState.showUsers };
     });
   }
+
   render() {
     //Helper code/func just like func comps
     const usersList = (
