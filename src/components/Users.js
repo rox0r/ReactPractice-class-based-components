@@ -1,4 +1,4 @@
-import { useState, Component } from "react";
+import { Component } from "react";
 import User from "./User";
 
 import classes from "./Users.module.css";
@@ -11,6 +11,7 @@ class Users extends Component {
       otherStates: "", // just for demo purpose
     };
   }
+
   toggleUsersHandler() {
     //Access prevValue like func comps
     this.setState((prevState) => {
